@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+<h1>Members</h1>
+
+<table border="1">
+{% for x in mymembers %}
+<tr>
+<td><a href="add.html">{{ x.id }}</a></td>
+<td>{{ x.firstname }}</td>
+<td>{{ x.lastname }}</td>
+<td><a href="add.html">delete</a></td>
+</tr>
+{% endfor %}
+</table>
+
+<p>
+<a href="add.html">Add member</a>
+</p>
+
+{% block content %}
+  <h1>Health Watch</h1>
+  <p><em>We are developing
+a watch that monitors the vital signs of its clients in a home setting and generates alerts and
+other data based on the monitored vital signs.</em>!</p>
+  <h2>About Health Watch</h2>
+  <p>Health Watch was founded in 2022 by Heinz Cléto and Amen Enihoro. </p>
+  <h3>Our Goal</h3>  
+  <p><em>The goal of
+the company is to allow individuals with health concerns to live a more independent life through
+non-intrusive technology methods.</em>!</p>
+  <p> An application example would be to help monitor people with
+early-stage dementia and to help carers, clinicians and families support people with dementia to
+live independently for as long as possible, while also providing peace of mind.
+  <p>The company
+provides various monitoring services and alerts such as routine monitoring, with alerts to family
+members when normal routines deviate significantly. </p>
+{% endblock %}

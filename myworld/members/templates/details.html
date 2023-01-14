@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+<div class="container-fluid">
+ <div class="row">
+ <div class="col-sm-2">
+ {% block sidebar %}
+ <ul class="sidebar-nav">
+ <li><a href="{% url 'index' %}">Home</a></li>
+ </ul>
+ 
+ {% endblock %}
+ 
+{% block content %}
+  <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+  
+  <p>Phone: {{ mymember.phone }}</p>
+  <p>Member since: {{ mymember.joined_date }}</p>
+  
+  
+{% endblock %} 
